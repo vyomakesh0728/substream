@@ -16,6 +16,9 @@ prost-types = "0.13.3"
 substreams = "0.6.0"
 substreams-solana = "0.14.1"
 substreams-solana-program-instructions = "0.2.0"
+tonic = { version = "0.10" }
+mio = "1.0.3"
+
 
 # Required so that ethabi > ethereum-types build correctly under wasm32-unknown-unknown
 [target.wasm32-unknown-unknown.dependencies]
@@ -24,6 +27,8 @@ getrandom = { version = "0.2", features = ["custom"] }
 [build-dependencies]
 anyhow = "1"
 regex = "1.8"
+tonic-build = "0.10"
+prost-build = "0.13.3"
 
 [profile.release]
 lto = true
